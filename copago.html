@@ -169,6 +169,23 @@ input[type=range]::-moz-range-thumb{width:48px;height:48px;border-radius:50%;bor
 
 
 .pills3{display:flex;gap:6px;margin-top:8px}.pills3 .pl{flex:1;min-width:0;border-radius:22px;padding:9px 4px 8px;text-align:center;color:#fff;display:flex;flex-direction:column;gap:1px;align-items:center}.pills3 .pl span{font-size:10.5px;font-weight:600;opacity:.95;line-height:1.2}.pills3 .pl b{color:#fff;font-size:16px;font-weight:700;letter-spacing:-.02em;line-height:1.2}.pills3 .pl b small{font-size:10px;font-weight:600;margin-left:1px}.pills3 .pl i{font-style:normal;font-size:9.5px;opacity:.9}.pills3 .sin{background:var(--t3)}.pills3 .adv{background:var(--ade)}.pills3 .c20{background:var(--brand)}
+
+/* ===== VERSIÓN PC (web): body.pc = ancho >= 900 px o ?v=pc ===== */
+.pc .app{max-width:1180px;padding-bottom:84px}
+.pc main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:22px 26px 30px;align-items:start}
+.pc main>section{grid-column:auto}
+.pc main>section.hero,.pc main>section:nth-of-type(2),.pc main>section:nth-of-type(3),.pc main>section:last-of-type{grid-column:1/-1}
+.pc .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:34px;align-items:center;padding:26px 30px 26px 34px}
+.pc h1{font-size:40px}.pc .hero p{font-size:15.5px;max-width:520px}.pc .heroin>.ic{width:84px;height:84px}
+.pc .heroR .kick{margin-top:0!important}.pc .fam .ic{width:72px;height:72px}
+.pc .card{padding:22px 26px}.pc .st h2{font-size:19px}.pc .st .ic{width:50px;height:50px}
+.pc .swipe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;overflow:visible;margin:12px 0 0;padding:10px 0 0}
+.pc .plan{flex:none}.pc .dots{display:none}
+.pc .simgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
+.pc .simR .bars{margin-top:0}
+.pc .team{max-width:520px}
+.pc #cta{max-width:420px}
+.pc .footer-bar{padding:16px 40px}
 </style>
 </head>
 <body>
@@ -180,14 +197,15 @@ input[type=range]::-moz-range-thumb{width:48px;height:48px;border-radius:50%;bor
   </header>
   <main>
     <section class="hero rv">
-      <div class="heroin"><i class="ic i-salud"></i><div>
+      <div class="heroL"><div class="heroin"><i class="ic i-salud"></i><div>
         <div class="kick" id="heroKick"></div>
         <h1 data-t="h1"></h1>
         <p data-t="lead"></p></div></div>
-      <svg class="ecg" viewBox="0 0 360 46" preserveAspectRatio="none"><path d="M0 26H70L82 26 92 6 104 42 116 15 124 26H200L212 26 222 6 234 42 246 15 254 26H360"/></svg>
+      <svg class="ecg" viewBox="0 0 360 46" preserveAspectRatio="none"><path d="M0 26H70L82 26 92 6 104 42 116 15 124 26H200L212 26 222 6 234 42 246 15 254 26H360"/></svg></div>
+      <div class="heroR">
       <div class="kick" style="margin-top:16px" id="famLbl"></div>
       <div class="fam" id="fam"></div>
-      <div class="kpi"><i class="ic i-ahorro"></i><div class="kb"><div class="kl" data-t="kpiL"></div><div class="kv" style="margin:4px 0 2px"><b class="cos" id="h-diff" style="font-size:44px">0</b><i style="font-size:20px"> €</i></div><div class="ks" id="h-ks"></div></div></div>
+      <div class="kpi"><i class="ic i-ahorro"></i><div class="kb"><div class="kl" data-t="kpiL"></div><div class="kv" style="margin:4px 0 2px"><b class="cos" id="h-diff" style="font-size:44px">0</b><i style="font-size:20px"> €</i></div><div class="ks" id="h-ks"></div></div></div></div>
     </section>
 
     <section class="card rv">
@@ -203,6 +221,7 @@ input[type=range]::-moz-range-thumb{width:48px;height:48px;border-radius:50%;bor
 
     <section class="card rv">
       <div class="st"><i class="ic i-fonendo"></i><h2><span data-t="simH"></span><small data-t="simS"></small></h2></div>
+      <div class="simgrid"><div class="simL">
       <div class="once"><i class="ic i-calendario"></i><div><div class="t1" data-t="onceT"></div><div class="t2" data-t="onceD"></div></div></div>
       <div class="presets" id="presets"></div>
       <div class="ctrl">
@@ -215,6 +234,7 @@ input[type=range]::-moz-range-thumb{width:48px;height:48px;border-radius:50%;bor
         <input type="range" id="sH" min="0" max="6" value="0">
         <div class="hint" data-t="hintH"></div>
       </div>
+      </div><div class="simR">
       <div class="bars">
         <div class="brow"><div class="rl"><span data-t="nSin"></span><span class="t" id="t0"></span></div><div class="bar"><i class="p" id="b0p"></i><i class="c" id="b0c"></i></div></div>
         <div class="brow rA"><div class="rl"><span>Advance</span><span class="t" id="tA"></span></div><div class="bar"><i class="p" id="bAp"></i><i class="c" id="bAc"></i></div></div>
@@ -222,6 +242,7 @@ input[type=range]::-moz-range-thumb{width:48px;height:48px;border-radius:50%;bor
         <div class="legend"><span class="lg"><s style="background:var(--t3)"></s><span data-t="lgP"></span></span><span class="lg"><s style="background:repeating-linear-gradient(45deg,var(--t3),var(--t3) 2px,var(--brl) 2px,var(--brl) 4px)"></s><span data-t="lgC"></span></span></div>
       </div>
       <div class="verdict" id="vbox"><i class="ic i-balanza"></i><div id="verdict"></div></div>
+      </div></div>
     </section>
 
     <section class="card rv">
@@ -277,13 +298,16 @@ input[type=range]::-moz-range-thumb{width:48px;height:48px;border-radius:50%;bor
    Parámetros URL (todos opcionales; sin ellos sale la familia de ejemplo):
      l = es | ca              idioma
      m = e | c                e = familia de ejemplo · c = cliente concreto
+     v = wa | pc              wa = columna móvil (WhatsApp) · pc = versión web ancha · sin v: automático
      p = sin,adv,c20          primas ANUALES en € (3629.02,2529.10,1481.60)
      a = H50,M42,M5,H1        asegurados: sexo (H/M) + edad
      n = Papá,Mamá,...        nombres opcionales (mismo orden que a), con encodeURIComponent
      r = 3                    rentabilidad anual compuesta en %
    ===================================================================== */
 const Q=new URLSearchParams(location.search);
-const L=Q.get('l')==='ca'?'ca':'es', MODE=Q.get('m')==='c'?'c':'e';
+const L=Q.get('l')==='ca'?'ca':'es', MODE=Q.get('m')==='c'?'c':'e', V=Q.get('v');
+function layout(){document.body.classList.toggle('pc',V==='pc'||(V!=='wa'&&innerWidth>=900));}
+layout();addEventListener('resize',layout);
 const LOC=L==='ca'?'ca-ES':'es-ES';
 const num=(s,d)=>{const v=parseFloat(String(s).replace(',','.'));return isFinite(v)&&v>0?v:d;};
 const pp=(Q.get('p')||'').split(',');
