@@ -287,7 +287,7 @@ input[type=range]::-moz-range-thumb{width:48px;height:48px;border-radius:50%;bor
     <p data-t="shP"></p>
     <a class="opt main" id="aWa" href="#"><i class="ic i-whatsapp-verd"></i><span>WhatsApp<small>972 42 66 65</small></span></a>
     <a class="opt" href="tel:+34692022080"><i class="ic i-telefono"></i><span data-t="shCall"></span></a>
-    <a class="opt" id="aMail" href="#"><i class="ic i-mail"></i><span><span data-t="shMail"></span><small>optimizarte@occident.com</small></span></a>
+    <a class="opt" id="aMail" href="#"><i class="ic i-mail"></i><span><span data-t="shMail"></span><small>luis.f@occident.com</small></span></a>
     <button class="x" id="close" data-t="shClose"></button>
   </div></div>
 </div>
@@ -314,7 +314,7 @@ const pp=(Q.get('p')||'').split(',');
 const PRIMA={c0:num(pp[0],3629.02),adv:num(pp[1],2529.10),c20:num(pp[2],1481.60)};
 const MES={c0:PRIMA.c0/12,adv:PRIMA.adv/12,c20:PRIMA.c20/12};
 const RENT=Math.min(0.10,Math.max(0,num(Q.get('r'),3)/100));
-const COPAGO=20, ALTO=100, TEL='34692022080', MAIL='optimizarte@occident.com';
+const COPAGO=20, ALTO=100, TEL='34692022080', MAIL='luis.f@occident.com';
 const DEF_NAMES=L==='ca'?['Papa','Mama','Nena','Nadó']:['Papá','Mamá','Niña','Bebé'];
 let people=(Q.get('a')||'').split(',').map(s=>s.trim().match(/^([HMhm])(\d{1,2})$/)).filter(Boolean).slice(0,8).map(m=>({sex:m[1].toUpperCase(),age:+m[2]}));
 let names=(Q.get('n')||'').split(',').map(s=>{try{return decodeURIComponent(s).slice(0,18);}catch(e){return '';}});
